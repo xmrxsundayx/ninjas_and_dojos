@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.dojo_form, .all_dojos{
+    background-color: #666666;
+    border: 4px solid black;
+    border-radius: 50px;
+    width: 50%;    
+    padding: 20px;
+    margin: 10px;
+    color: rgb(185, 213, 107);
+}
+tbody{
+    color: rgb(185, 213, 107);
+    border: 2px solid black;
+}
+.dojo_columns{
+    display: flex;
+    justify-content: center;
+    width: 70%;    
+    margin: 50px;
+}
+.ninja_form, .view_form{
+    width: 80%;
+    padding: 20px;
+    margin: 10px;
+    color: rgb(185, 213, 107);
+    background-color: #666666;
+    border: 4px solid black;
+    border-radius: 50px;
+}

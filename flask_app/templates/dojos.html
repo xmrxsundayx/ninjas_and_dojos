@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="dojo_columns">
+    <div class="dojo_form">
+        <h1>New Dojo</h1>
+        <form action="/create/dojo" method="POST">
+            <input type="hidden" name="id">
+            <label for="new_dojo">Name:</label>
+            <input type="text" name="name" id="new_dojo">
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <div class="all_dojos">
+        <h1>All Dojos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in all_dojos %}
+                <tr class="table-active">
+                    <td><a href="/view/{{x.id}}">{{x.name}}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+        <button><a href="/ninjas">Add Ninja</a></button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

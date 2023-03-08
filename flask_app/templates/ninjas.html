@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="ninja_container">
+    <div class="ninja_form">
+        <h1>Ninjas</h1>
+        <div class="ninja_columns">
+            <form class="form" action="/create/ninja" method="POST">
+                <input type="hidden" name="id">
+                <label for="new_ninja" >Dojo:</label>
+                <select class="location_select" name="dojo_id">
+                    <option selected>Location</option>                
+                    {% for dojo in all_dojos %}
+                    <option value="{{dojo.id}}">{{dojo.name}}</option>
+                    {% endfor %}
+                </select>
+                <div>
+                    <label for="new_ninja">First Name:</label>
+                    <input type="text" name="first_name">
+                </div>
+                <div>
+                    <label for="new_ninja">Last Name:</label>
+                    <input type="text" name="last_name">
+                </div>
+                <div>
+                    <label for="new_ninja">Age:</label>
+                    <input type="number" name="age">
+                </div>
+                <input type="submit" value="Create Ninja">
+            </form>
+        </div>
+    </div> 
+    <button><a href="/">HOME</a></button>
+</div>
+
+{% endblock %}
